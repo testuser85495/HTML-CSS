@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: blue;
+            color: black;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        span {
+            text-decoration: underline solid blue;
+        }
+
+        div {
+            background: white;
+            width: 50%;
+            margin-top: 5%;
+            border-radius: 20px;
+        }
+
+        button {
+            height: 36px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <div>
+            <h1> <span>Re</span>gistation</h1>
+            <form action="">
+                <table cellspacing="20px">
+                    <tr>
+                        <td colspan="3">
+                            <b>Persnol Details</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="">First Name</label></td>
+                        <td><label for="">D.O.B</label></td>
+                        <td><label for="">Email</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="FIRST NAME"></td>
+                        <td><input type="date"></td>
+                        <td><input type="Email" placeholder="XYZ@gmail.com"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Mobile</label></td>
+                        <td><label for="">Gender</label></td>
+                        <td><label for="">Occupation</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Mobile"></td>
+                        <td><input type="radio" id="html" name="Gender" value="male">
+                            <label for="html">Male</label>
+                            <input type="radio" id="css" name="Gender" value="Female">
+                            <label for="css">Female</label>
+                        </td>
+                        <td><input type="text" placeholder="occupation"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <b>Identity Details</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="text">ID Type</label></td>
+                        <td><label for="text">ID number</label></td>
+                        <td><label for="text">Issue Authanity</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="id Type"></td>
+                        <td><input type="number" placeholder="ID number"></td>
+                        <td><input type="Email" placeholder="Issue Authanity"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Issue Date</label></td>
+                        <td><label for="text">Issue state</label></td>
+                        <td><label for="date">Exp date</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Issue Date"></td>
+                        <td><input type="date" placeholder="Issue Status"></td>
+                        <td><input type="Email" placeholder="Exp date "></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"> 
+                            <button type="submit" value="Submit">Submit <i class="fa-solid fa-arrow-right"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
