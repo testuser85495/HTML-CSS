@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .header {
+            height: 40px;
+            background-color: cadetblue;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* justify-content: center; */
+            justify-content: space-between;
+
+
+
+            /* background-image: url(wayland-logo.png);
+            background-position:left;
+            background-size: contain;
+            background-repeat: no-repeat; */
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            justify-content: end;
+        }
+
+        .main {
+            height: 600px;
+            /* width: 100%; */
+            background-color: white;
+            display: flex;
+
+
+        }
+
+        .m1 {
+            height: 50%;
+            width: 80%;
+            background-color: white;
+            margin: 2%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .m2 {
+            height: inherit;
+            width: 20%;
+            background-color: cadetblue;
+            margin: 2%;
+
+        }
+
+        .card1 {
+            height: 200px;
+            width: 200px;
+            border: black solid 3px;
+            margin-left: 50px;
+        }
+
+
+        h2 {
+            text-transform: capitalize;
+            padding-left: 15px;
+            height: 30px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <div>
+            <h1>My Website</h1>
+        </div>
+        <div style="flex-direction: row; display: flex;">
+            <a href="#" class="link"><b>link 1</b></a>
+            <a href="#" class="link"><b>link 2</b></a>
+            <a href="#" class="link"><b>link 3</b></a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="m1">
+            <div>
+                <h1>This is the main heading</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio labore eligendi debitis facere
+                    nesciunt animi quos error facilis sint iste.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque accusantium nobis magni autem quam!
+                </p>
+
+            </div>
+            <div style="display: flex;">
+                <div class="card1">
+                    <h2>card one</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus enim obcaecati iure fugiat
+                        recusandae placeat?</p>
+                </div>
+                <div class="card1">
+                    <h2>card two</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus enim obcaecati iure fugiat
+                        recusandae placeat?</p>
+                </div>
+                <div class="card1">
+                    <h2>card three</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus enim obcaecati iure fugiat
+                        recusandae placeat?</p>
+                </div>
+
+                <div class="card1">
+                    <h2>card four</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus enim obcaecati iure fugiat
+                        recusandae placeat?</p>
+                </div>
+                <div class="card1">
+                    <h2>card five</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus enim obcaecati iure fugiat
+                        recusandae placeat?</p>
+                </div>
+            </div>
+        </div>
+        <div class="m2">
+            <p style="margin: 3%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et doloremque eveniet qui
+                voluptate doloribus. Earum, aliquid?</p>
+        </div>
+    </div>
+</body>
+
+</html>

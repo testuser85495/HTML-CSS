@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 40px;
+            background-color: cadetblue;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            width: 25%;
+            position: relative;
+            left: 2%;
+
+        }
+
+        .links {
+            width: 75%;
+            position: relative;
+            right: 2%;
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+            color: black;
+            word-spacing: 3%;
+        }
+
+        .main {
+            height: 600px;
+            display: flex;
+
+        }
+
+        .m1 {
+            height: 100%;
+            width: 80%;
+            background-color: white;
+            margin: 1%;
+
+        }
+
+        .m2 {
+            height: 100%;
+            width: 20%;
+            background-color: cadetblue;
+            /* background: linear-gradient */
+            
+            margin: 1%;
+        }
+
+        .heading {
+            position: relative;
+            left: 1%;
+        }
+
+        .card {
+            height: 200px;
+            width: 200px;
+            border: 3px solid black;
+            margin: 1%;
+            text-transform: capitalize;
+        }
+
+        .card-styl {
+            display: flex;
+            flex-wrap: wrap;
+            /* margin: 2%; */
+
+        }
+
+        h2 {
+            height: 40px;
+            background-color: black;
+            color: white;
+            padding-left: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+        button{
+            background: linear-gradient(45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+            );
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- header start -->
+    <div class="header">
+        <div class="logo">
+            <h1>MY Website</h1>
+        </div>
+        <div class="links">
+            <a href="#"><b>Link 1</b></a>
+            <a href="#"><b>Link 2</b></a>
+            <a href="#"><b>Link 3</b></a>
+        </div>
+    </div>
+    <!-- header End -->
+
+    <div class="main">
+        <div class="m1">
+            <div class="heading">
+                <h1>This is heading</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, dolore libero sapiente
+                    dignissimos possimus adipisci cum non ipsam ut repudiandae.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod exercitationem labore in distinctio
+                    minima facere tempora, suscipit iusto voluptatibus. Sapiente!</p>
+            </div>
+            <div class="card-styl">
+                <div class="card">
+                    <h2>card one </h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a reprehenderit dolorem explicabo
+                        vitae minima at expedita impedit id perspiciatis?</p>
+                </div>
+                <div class="card">
+                    <h2>card two</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a reprehenderit dolorem explicabo
+                        vitae minima at expedita impedit id perspiciatis?</p>
+                </div>
+                <div class="card">
+                    <h2>card three</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a reprehenderit dolorem explicabo
+                        vitae minima at expedita impedit id perspiciatis?</p>
+                </div>
+                <div class="card">
+                    <h2>card four</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a reprehenderit dolorem explicabo
+                        vitae minima at expedita impedit id perspiciatis?</p>
+                </div>
+                <div class="card">
+                    <h2> card five </h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a reprehenderit dolorem explicabo
+                        vitae minima at expedita impedit id perspiciatis?</p>
+                </div>
+                <div class="card">
+                    <h2>card six</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a reprehenderit dolorem explicabo
+                        vitae minima at expedita impedit id perspiciatis?</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="m2"></div>
+
+    </div>
+
+
+    <div>
+        <button>next</button>
+    </div>
+
+
+</body>
+
+</html>
