@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+
+        }
+
+        body {
+            background-image: url(meetings-bg.jpg);
+        }
+
+        .header {
+            height: 10vh;
+            width: 100%;
+            /* background-color: rgba(250, 250, 250, 0.15); */
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+
+
+        .logo {
+            height: 20vh;
+            width: 25%;
+            background-color: rgba(250, 250, 250, 0.15);
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: white;
+
+
+            /* background: linear-gradient(to right,rgba(234, 16, 16, 0.5),rgb(243, 0, 0)),url(course-video.mp4); */
+        }
+
+        .links {
+            height: 20vh;
+            width: 75%;
+            background-color: rgba(250, 250, 250, 0.15);
+            list-style: none;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: end;
+            justify-items: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+
+        }
+
+        .links a {
+            text-decoration: none;
+            margin: 2%;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .video_head {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(250, 250, 250, 0.15);
+            /* z-index: -1; */
+
+        }
+
+        video {
+            min-width: 100%;
+            min-height: 100vh;
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+
+        .video-layout {
+            position: absolute;
+            background-color: rgba(31, 39, 43, 0.75);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .video-content {
+            height: 50%;
+            width: 150%;
+            position: absolute;
+            top: 40%;
+            left: 6%;
+            color: white;
+        }
+
+        #btn-join {
+            height: 40px;
+            width: 123px;
+            background-color: #a12c2f;
+            color: white;
+            border: none;
+            border-radius: 22px;
+            margin-top: 30px;
+        }
+
+        .card-head {
+            width: 100%;
+        }
+
+        .cards {
+            height: 250px;
+            width: 400px;
+            background-color: #a12c2f;
+            color: white;
+            border-radius: 20px;
+            position: relative;
+            margin: 2%;
+        }
+
+        .card-icon1 {
+
+            position: absolute;
+            top: 20%;
+            left: 40%;
+        }
+
+        .card-contain {
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: -3%;
+
+        }
+
+        .card-head {
+            height: 46%;
+            width: 100%;
+            position: absolute;
+            top: 82%;
+            left: 1%;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .main {
+            height: 250px;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .m1 {
+            position: relative;
+            top: 60%;
+            left: 40%;
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+        }
+
+        hr {
+            width: 90%;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+
+        .Meeting_Catgories {
+            height: 450px;
+            width: 350px;
+            background-color: white;
+            border-radius: 25px;
+            margin-left: 45px;
+            margin-top: 2%;
+            position: relative;
+            left: 3%;
+        }
+
+        .metting_cards {
+            width: 60%;
+            display: flex;
+            border-radius: 25px;
+            position: relative;
+            top: 2%;
+            left: 10%;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .card {
+            height: 400px;
+            width: 400px;
+            background-color: white;
+            border-radius: 25px;
+            margin: 2%;
+        }
+
+        .metting_main {
+            display: flex;
+        }
+
+        .catgories_heading {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f272b;
+            margin-bottom: 19px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .catgories_list a {
+            margin-bottom: 15px;
+            font-size: larger;
+            text-decoration: none;
+            color: black;
+        }
+
+        .catgories_list li {
+            margin-bottom: 15px;
+            font-size: inherit;
+            padding-bottom: 15px;
+        }
+
+        #a {
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #a12c2f;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .m_img1 {
+            height: 250px;
+            width: 400px;
+            background-image: url(meeting-01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            position: relative;
+        }
+
+        .m_img2 {
+            height: 250px;
+            width: 400px;
+            background-image: url(meeting-02.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            position: relative;
+        }
+
+        .m_img3 {
+            height: 250px;
+            width: 400px;
+            background-image: url(meeting-03.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            position: relative;
+        }
+
+        .m_img4 {
+            height: 250px;
+            width: 400px;
+            background-image: url(meeting-04.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            position: relative;
+        }
+
+        .img_contain {
+            height: 150px;
+            width: 400px;
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+        }
+
+        .mm1 {
+            display: flex;
+            justify-content: center;
+            height: 150px;
+            width: 20%;
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+
+        .m2 {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+
+        .price {
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 36px;
+            width: 80px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+       
+        a {
+            text-decoration: none;
+        }
+
+        .apply_contain {
+            position: relative;
+            margin: 10%;
+
+
+        }
+
+        .bachelor_card {
+            height: 200px;
+            width: 50%;
+            background-color: rgba(250, 250, 250, 0.15);
+            margin-bottom: 20px;
+
+        }
+
+        .news {
+            height: 420px;
+            width: 46%;
+            background-color: white;
+            color: black;
+            border-radius: 25px;
+            position: absolute;
+            left: 52%;
+            top: 0;
+        }
+
+        .item {
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .item h3 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .item p {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .scroll-to-section a {
+            font-size: 13px;
+            color: #fff;
+            background-color: #a12c2f;
+            padding: 12px 30px;
+            display: inline-block;
+            border-radius: 22px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .COURSES_main {
+            margin: 10%;
+            color: white;
+        }
+
+        .COURSES_header {
+            font-size: larger;
+            font-weight: bolder;
+            color: white;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+        }
+
+        .COURSES_cards {
+            margin-top: 5%;
+            height: 300px;
+            width: 270px;
+            background-color: white;
+
+        }
+
+        .card_main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .card_contain {
+            color: black;
+            /* margin: 10px; */
+            font-size: 20px;
+            padding: 15px;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        .stars {
+            color: black;
+            width: 50%;
+            margin-left: 10px;
+        }
+
+        .a2 {
+            color: #a12c2f;
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            margin-right: 10px;
+        }
+
+        .str_card {
+            display: flex;
+            margin: 10px;
+        }
+
+        .getintouch {
+            font-size: larger;
+            border-bottom: 1px solid rgb(172, 169, 169);
+            color: black;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        .contactus_main {
+            margin: 6%;
+            height: 500px;
+            width: 60%;
+            background-color: white;
+            background-color: #eee;
+            border-radius: 25px;
+        }
+
+        input {
+            border: none;
+            padding: 20px;
+            margin: 20px;
+            height: 20px;
+            width: 26%;
+            border-radius: 25px;
+            border-color: #eee;
+            box-sizing: 1px;
+        }
+
+        .form-control {
+            margin: 2%;
+            width: 95%;
+            min-height: 200px;
+            max-height: 180px;
+            border-radius: 20px;
+            background-color: #f7f7f7;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            font-size: 13px;
+            font-weight: 500;
+            color: #7a7a7a;
+            padding: 15px;
+            margin-bottom: 30px;
+
+        }
+
+        .btnmsg_now {
+            margin: 2%;
+            height: 44px;
+            width: 206px;
+            background-color: #a12c2f;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .contact_info {
+            margin-top: 60px;
+            height: 550px;
+            display: flex;
+            width: 25%;
+            border-radius: 25px;
+        }
+
+        .right-info {
+            background-color: #a12c2f;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .x1 {
+            display: flex;
+        }
+
+        .info_ul li {
+            border-bottom: 1px solid #eee;
+            margin-right: 115px;
+            display: inline-block;
+            border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+        .footer {
+            text-align: center;
+            border-top: 1px solid rgba(250, 250, 250, 0.15);
+            padding: 50px 0px;
+        }
+
+        .footer p {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .footer p a {
+            color: #f5a425;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+
+        <!-- logo start -->
+        <div class="logo">
+            EDU Metting
+        </div>
+        <!-- logo End -->
+        <!-- LINK start -->
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Meeting</a>
+            <a href="#">Apply Now</a>
+            <a href="#">Pages</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <!-- LINK end -->
+    </div>
+    <!-- header End -->
+    <div class="video_head">
+        <!-- video start -->
+        <div class="video">
+            <video src="course-video.mp4" muted loop autoplay type="video/mp4"> </video>
+        </div>
+        <div class="video-layout">
+            <!-- video End -->
+            <div class="video-content">
+                <h6 style="font-size: large; text-transform: capitalize;"> hello Students</h6>
+                <h2 style="margin-top: 20px; margin-bottom: 20px;">WELCOME TO EDUCATION</h2>
+                <p>This is an edu metting html CSS Templatele provided by <a href="#"
+                        style="color: #3CF; text-decoration: none;">TemplateMo website</a>.This <br>
+                    is a Bootstrap v5.1.3 layout. The video background is taken from Pexels website, a <br>
+                    group of young people by <a href="#" style="color: #3CF; text-decoration: none;">Pressmaster</a>.
+                </p>
+                <button id="btn-join">JOIN US NOW!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-head">
+        <div class="cards">
+
+            <div class="card-icon1">
+                <img src="service-icon-01.png" alt="">
+            </div>
+            <div class="card-contain">
+                <center>
+                    <h3>Best Networking</h3>
+                    <p style="margin-top: 20px;">Suspendisse tempor mauris a sem elementum bibendum. Praesent
+                        facilisis
+                        massa non <br> vestibulum.</p>
+                </center>
+            </div>
+
+        </div>
+        <!-- crad2 start -->
+        <div class="cards">
+
+            <div class="card-icon1">
+                <img src="service-icon-01.png" alt="">
+            </div>
+            <div class="card-contain">
+                <center>
+                    <h3>Best Networking</h3>
+                    <p style="margin-top: 20px;">Suspendisse tempor mauris a sem elementum bibendum. Praesent
+                        facilisis
+                        massa non <br>vestibulum.</p>
+                </center>
+            </div>
+
+        </div>
+        <!-- crad2 end -->
+
+        <!-- card3 start -->
+        <div class="cards">
+
+            <div class="card-icon1">
+                <img src="service-icon-01.png" alt="">
+            </div>
+            <div class="card-contain">
+                <center>
+                    <h3>Best Networking</h3>
+                    <p style="margin-top: 20px;">Suspendisse tempor mauris a sem elementum bibendum. Praesent
+                        facilisis
+                        massa non <br>vestibulum.</p>
+                </center>
+            </div>
+
+        </div>
+        <!-- card3 end -->
+
+    </div>
+    <!-- main start -->
+    <div class="main">
+
+        <div class="m1">UPCOMING METTING </div>
+    </div>
+    <hr>
+    <div class="main1">
+        <!-- metting_container  Start-->
+
+        <div class="metting_main">
+            <div class="Meeting_Catgories" style="padding: 40px ;margin-right:45px">
+                <div>
+                    <div class="catgories_heading">
+                        <h4>Meeting Catgories</h4>
+                    </div>
+                    <div class="catgories_list">
+                        <ul type="none">
+                            <li> <a href="">Sed tempus enim leo</a></li>
+                            <li> <a href="">Aenean molestie quis</a></li>
+                            <li> <a href="">Cras et metus vestibulum</a></li>
+                            <li> <a href="">Nam et condimentum</a></li>
+                            <li style="border-bottom: 1px solid #eee;"> <a href="">Phasellus nec sapien</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="metting_btn">
+                    <a href="" style="text-decoration: none;" id="a">All Upcoming Meetings</a>
+                </div>
+            </div>
+            <div class="metting_cards">
+                <div class="card">
+                    <div class="m_img1">
+                        <div class="price"><b> &dollar; 22.00 </b></div>
+                    </div>
+                    <div class="img_contain">
+                        <div class="mm1">
+                            <h1 style="color: #a12c2f; font-size: 20px; margin: 15%;">NOV</h1>
+                            <br>
+                            <h2 style="font-size: 25px;">10</h2>
+                        </div>
+                        <div class="m2">
+                            <a href="" style="text-decoration: none ; color: black;">
+                                <h4>New Lecturers Meeting</h4>
+                            </a>
+                            <p>Morbi in libero blandit lectus <br>cursus ullamcorper.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="m_img2">
+                        <div class="price"><b> &dollar; 36.00 </b></div>
+                    </div>
+                    <div class="img_contain">
+                        <div class="mm1">
+                            <h1 style="color: #a12c2f; font-size: 20px; margin: 15%;">NOV</h1>
+                            <br>
+                            <h2 style="font-size: 25px;">24</h2>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="m_img3">
+                        <div class="price"><b> &dollar; 14.00</b></div>
+                    </div>
+                    <div class="img_contain">
+                        <div class="mm1">
+                            <h1 style="color: #a12c2f; font-size: 20px; margin: 15%;">NOV</h1>
+                            <br>
+                            <h2 style="font-size: 25px;">26</h2>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="m_img4">
+                        <div class="price"> <b>&dollar; 42.00 </b></div>
+                    </div>
+                    <div class="img_contain">
+                        <div class="mm1">
+                            <h1 style="color: #a12c2f; font-size: 20px; margin: 15%;">NOV</h1>
+                            <br>
+                            <h2 style="font-size: 25px;">30</h2>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <!-- metting_container End -->
+            </div>
+            <!-- main end -->
+        </div>
+    </div>
+
+    <div style="color: white;" class="apply_contain">
+        <div class="bachelor_card">
+            <div class="item">
+                <h3>APPLY FOR BACHELOR DEGREE</h3>
+                <p>You are allowed to use this edu meeting CSS template for your school or university or business. You
+                    can feel free to modify or edit this layout.</p>
+                <div class="main-button-red">
+                    <div class="scroll-to-section"><a href="#">Join Us Now!</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="bachelor_card">
+            <div class="item">
+                <h3>APPLY FOR BACHELOR DEGREE</h3>
+                <p>You are not allowed to redistribute the template ZIP file on any other template website. Please
+                    contact us for more information.</p>
+                <div class="main-button-yellow">
+                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="news">hello</div>
+    </div>
+
+    <div class="COURSES_main">
+
+        <div class="COURSES_header">
+            OUR POPULAR COURSES
+        </div>
+        <div class="card_main">
+            <div class="COURSES_cards">
+                <img src="course-01.jpg" alt="">
+                <div class="card_contain">
+                    <center>
+                        <h4 style="color: black;">Aenean molestie quis libero gravida</h4>
+                    </center>
+                </div>
+                <div class="str_card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                    </div>
+                    <div class="a2"><b>&dollar;200</b></div>
+                </div>
+            </div>
+
+            <div class="COURSES_cards">
+                <img src="course-02.jpg" alt="">
+                <div class="card_contain">
+                    <center>
+                        <h4>Web Design Templates at your finger tips</h4>
+                    </center>
+                </div>
+                <div class="str_card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                    </div>
+                    <div class="a2"><b>&dollar;200</b></div>
+                </div>
+
+            </div>
+            <div class="COURSES_cards">
+                <img src="course-03.jpg" alt="">
+                <div class="card_contain">
+                    <center>
+                        <h4>Web Design Templates at your finger tips</h4>
+                    </center>
+                </div>
+                <div class="str_card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                    </div>
+                    <div class="a2"><b>&dollar;200</b></div>
+                </div>
+
+            </div>
+            <div class="COURSES_cards">
+                <img src="course-04.jpg" alt="">
+                <div class="card_contain">
+                    <center>
+                        <h4>Please visit our website again</h4>
+                    </center>
+                </div>
+                <div class="str_card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #ffc800;"></i>
+                    </div>
+                    <div class="a2"><b>&dollar;200</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x1">
+        <div style="color: white;" class="contactus_main">
+            <div class="getintouch"><b>LET'S GET IN TOUCH</b></div>
+            <form action="">
+                <div class="contact_input">
+                    <div class="text_input">
+                        <input type="text" placeholder="Enter Your Name">
+                        <input type="text" placeholder="Enter Your Email">
+                        <input type="text" placeholder="Enter Your Subject">
+                        <textarea name="message" type="text" class="form-control" id="message"
+                            placeholder="YOUR MESSAGE..." required=""></textarea>
+                    </div>
+                    <div class="btnmsg_now">
+                        <a href="" style="color: white;">SEND MESSAGE NOW</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contact_info">
+            <div class="right-info">
+                <ul type="none" class="info_ul">
+                    <li>
+                        <h6>Phone Number</h6>
+                        <span>010-020-0340</span>
+                    </li>
+                    <li>
+                        <h6>Email Address</h6>
+                        <span>info@meeting.edu</span>
+                    </li>
+                    <li>
+                        <h6>Street Address</h6>
+                        <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
+                    </li>
+                    <li>
+                        <h6>Website URL</h6>
+                        <span>www.meeting.edu</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
+            <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
+        </p>
+    </div>
+</body>
+
+</html>
