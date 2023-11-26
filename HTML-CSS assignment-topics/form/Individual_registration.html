@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual_registration</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        background-color: #90d0fb;
+        color: red;
+    }
+
+    .body {
+        height: 501px;
+        width: 700px;
+        background-color: white;
+
+        margin-left: 25%;
+        margin-top: 100px;
+    }
+
+    span {
+        color: red;
+    }
+
+    h3 {
+        color: red;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    form {
+        margin-top: 2%;
+
+    }
+
+    .form {
+        background-color: #cdfffe;
+    }
+    label{
+        color: #0f265a;
+    }
+
+    input,select {
+        margin-left: 10px;
+        margin-right: 30px;
+        border-color: lightblue;
+
+    }
+    input{
+        border-color: #0f265a;
+    }
+
+    button {
+        background-color: #3098c7;
+        color: white;
+        height: 20px;
+        width: 78px;
+        margin-top: 20px;
+
+    }
+
+    .btn {
+        margin-left: 38%;
+    }
+
+    .Persnol_Particulars {
+        margin-left: 30px;
+    }
+
+    .Account_Particulars {
+        margin-left: 30px;
+    }
+    .DECLARATION{
+        margin-left: 30px;
+        color: #0f265a;
+    }
+</style>
+
+<body>
+    <div class="body">
+        <div>
+            <h2 align="center">Individual Registration</h2>
+        </div>
+
+        <div class="form">
+            <form action="">
+                <h3>User Particulars</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th align="end"><label for=""><span>*</span>Login ID </label></th>
+                            <td> <input type="text" required></td>
+
+                        </tr>
+                        <tr>
+                            <th align="end"><label for=""><span>*</span>Password </label></th>
+                            <td> <input type="text" required></td>
+
+                        </tr>
+                        <tr>
+                            <th><label for=""><span>*</span>Confirm Password</label></th>
+                            <td> <input type="text" required></td>
+
+                        </tr>
+                    </table>
+                </center>
+
+                <div>
+                    <h3>Persnol Particulars</h3>
+                </div>
+
+                <div class="Persnol_Particulars">
+                    <table>
+                        <tr>
+                            <th align="end"><label for="select"><span>*</span>Salutation</label></th>
+                            <td>
+                                <select name="Salutation" id="Salutation">
+                                    <option value="select">select</option>
+                                </select>
+                            </td>
+
+                            <th align="end"><label for=""><span>*</span>First Name</label></th>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <th align="end"><label for="">Middle Name</label></th>
+                            <td><input type="text"></td>
+                            <th align="end"><label for=""><span>*</span>Last Name</label></th>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <th align="end"><label for="Resident Status"><span>*</span>Resident Status</label></th>
+                            <td><select name="Resident Status" id="Resident Status">
+                                    <option value="select">select</option>
+                                </select>
+                            </td>
+                            <th align="end"><label for="Countrys"><span>*</span>Country</label></th>
+                            <td>
+                                <select name="Country" id="Country">
+                                    <option value="select">select</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="end"><label for=""><span>*</span>Email-Id</label></th>
+                            <td><input type="text" required></td>
+                            <th align="end"><label for=""><span>*</span>Mobile Number</label></th>
+                            <td><input type="number" required></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>Account Particulars</h3>
+                </div>
+                <div class="Account_Particulars">
+                    <table>
+                        <tr>
+                            <th align="end"><label for=""><span>*</span>15 Digit Account <br>No</label></th>
+                            <td><input type="number" required></td>
+                            <th align="end"><label for=""><span>*</span>Nick Name</label></th>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="Fund Transfer"><span>*</span>Fund Transfer</label></th>
+                            <td>
+                                <select name="Fund Transfer" id="Fund Transfer">
+                                    <option value="select">select</option>
+                                </select>
+                        </tr>
+
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>DECLARATION</h3>
+                    <div class="DECLARATION">
+                        <p>I have read, understood and hereby agree to the terms and condition in respect of all
+                            products
+                            and<br>
+                            channels. <br>
+                            I Undersrand that any any changes in the terms and condition applicable to this relationship
+                            would
+                            be made <br>
+                            available to me on request at any JOB branches. I Confirm that all account under this login
+                            name are
+                            <br>
+                            operated singly and in case of joint account operated by either or survivor/anyone or
+                            survivor(s)
+                            under <br>
+                            his/Her joint name respectively. I do hereby declare that information furnished in this
+                            forns in
+                            true to the <br>
+                            best of my knowledge and belief. <br>
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">submit</button>
+                        <button type="reset">reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
